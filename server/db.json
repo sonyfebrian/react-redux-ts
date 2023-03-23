@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "role": "user"
+    }
+  ],
+  "category": [
+    {
+      "name": "Makananaa",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Minuman"
+    },
+    {
+      "name": "sa",
+      "id": 3
+    },
+    {
+      "name": "asda",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "name": "aaaa",
+      "code": "aaa",
+      "qty": 2000,
+      "price": 909090,
+      "id": 1
+    },
+    {
+      "name": "a",
+      "code": "a",
+      "qty": 21222,
+      "price": 1222222223,
+      "id": 2
+    },
+    {
+      "name": "b",
+      "code": "a",
+      "qty": 3000,
+      "price": 600,
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "asaaaaaaa",
+      "plu": "asssssssss",
+      "id": 1
+    },
+    {
+      "name": "as",
+      "plu": "aa",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "plu": "asssddaaa",
+      "id": 3
+    }
+  ]
+}

@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { LoginPage, Category, Home, Product, ProductLists} from './App/pages';
+import CategoryForm from './App/pages/Category/CategoryForm';
+import ProductForm from './App/pages/Product/ProductForm'
+import ProductsForm from './App/pages/ProductList/ProductListForm';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     
+     <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/addCategory" element={<CategoryForm/>} />
+        <Route
+            path="/edit/:id"
+            element={<CategoryForm isEditForm={true} />}
+          ></Route>
+          <Route path="/product" element={<Product />} />
+        <Route path="/addProduct" element={<ProductForm/>} />
+        <Route
+            path="/editProduct/:id"
+            element={<ProductForm isEditProduct={true} />}
+          ></Route>
+           <Route path="/products" element={<ProductLists />} />
+        <Route path="/addProducts" element={<ProductsForm/>} />
+        <Route
+            path="/editProducts/:id"
+            element={<ProductsForm isEditProducts={true} />}
+          ></Route>
+        {/* <Route path="productCategory" element={<ProductCategorys />} /> */}
+      </Routes>
+      <ToastContainer />
     </div>
   );
 }
